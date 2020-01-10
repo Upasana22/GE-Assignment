@@ -1,0 +1,31 @@
+function fun(file) {
+    
+    for(let i=0;i<=file.length-1;i++)
+    {
+        var char=file.charAt(i);
+        if(char !='A'&char !='E'&char !='I'&char !='O'&char !='U')
+        {
+            if(char=='X')
+            {
+                temp=temp+"A";
+            }
+            else if (char=='Y')
+            {
+                temp=temp+"B";
+            }
+            else if(char=='Z')
+            {
+                temp=temp+"C";
+            }
+            else
+            {
+                temp=temp+String.fromCharCode(file.charCodeAt(i)+3)
+            }
+        }
+        else
+        {
+            temp=temp+char;
+        }
+    }
+    return temp;
+}
